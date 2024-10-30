@@ -1,3 +1,4 @@
+import withCounter from '../../libs/withCounter';
 import Article from '../Article/Article';
 import Video from '../Video/Video';
 import TVideo from '../../models/TVideo';
@@ -7,12 +8,15 @@ interface IListProps {
 }
 
 const List = ({ list }: IListProps) => {
+  const ArticleViews = withCounter(Article);
+  const VideoViews = withCounter(Video);
+
   return list.map((item) => {
     switch (item.type) {
-      case 'video':
-        return <Video {...item} />;
       case 'article':
-        return <Article {...item} />;
+        return <ArticleViews key={item.id} {...item} />;
+      case 'video':
+        return <VideoViews key={item.id} {...item} />;
     }
   });
 };
