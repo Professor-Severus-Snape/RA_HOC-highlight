@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/achfis9ldpokcrpl?svg=true)](https://ci.appveyor.com/project/Professor-Severus-Snape/ra-hoc-highlight)
+
 # Подсвечивание блоков
 
 На нашем сайте есть блоки со статьями и с видеозаписями. 
